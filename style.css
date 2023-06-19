@@ -1,0 +1,303 @@
+/* css styles  font Roboto*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;700&display=swap');
+
+
+:root {
+    --Tomato: hsl(4, 100%, 67%);
+    --Dark-Slate-Grey: hsl(234, 29%, 20%);
+    --Charcoal-Grey: hsl(235, 18%, 26%);
+    --Grey: hsl(231, 7%, 60%);
+    --White: hsl(0, 0%, 100%);
+    --Font-size-paragraph: 16px;
+}
+
+*,
+*::after,
+*::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    line-height: 1.5em;
+    font-family: 'Roboto', sans-serif;
+    min-height: 100vh;
+    font-size: var(--Font-size-paragraph);
+    background-color: var(--Dark-Slate-Grey);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    flex: 1;
+    position: relative;
+    padding: 1em;
+}
+
+section:nth-of-type(1) {
+    padding: 3em;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+
+}
+
+section:nth-of-type(2) {
+    padding: 0px;
+}
+
+.container {
+    width: 847px;
+    background-color: var(--White);
+    border-radius: 1em;
+    padding: 1em;
+    display: flex;
+    flex-direction: row;
+
+}
+
+.image-div {
+    background-image: url('./assets/images/illustration-sign-up-desktop.svg');
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: contain;
+    background-clip: border-box;
+    background-repeat: no-repeat;
+
+}
+
+.news_box_para {
+    margin: 1.5em 0;
+    font-size: inherit;
+    color: var(--Charcoal-Grey);
+}
+
+.news_box_heading {
+    color: var(--Charcoal-Grey);
+    font-size: clamp(0.5em, 1vh + 3em, 3.2em);
+    font-weight: 700;
+    margin-bottom: 0.8em;
+}
+
+/* ul{
+     list-style-image: url(./assets/images/icon-list.svg);
+     line-height: 30px;  
+     list-style-position: inside;
+    
+} */
+ul {
+    list-style: none;
+    margin-bottom: 2em;
+    position: relative;
+    list-style-position: inside;
+}
+
+ul li {
+    margin-left: 20px;
+    color: var(--Charcoal-Grey);
+    margin-bottom: 0.6em;
+}
+
+ul li::before {
+    content: '';
+    content: '';
+    position: absolute;
+    left: 0px;
+    background-image: url(./assets/images/icon-list.svg);
+    height: 20px;
+    display: block;
+    width: 20px;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+ul li span {
+    padding-left: 1em;
+    font-size: 15px;
+}
+
+label {
+    font-weight: 700;
+}
+
+input {
+    margin: 0.8em 0;
+    cursor: pointer;
+    width: 100%;
+    padding: 1em;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    position: relative;
+    width: 100%;
+    border: none;
+    transition: 0.3s all;
+    cursor: pointer;
+    background-color: var(--Dark-Slate-Grey);
+    color: var(--White);
+    font-size: 13PX;
+    font-weight: 700;
+    padding: 1em;
+    border-radius: 5px;
+}
+
+button:hover {
+    transition: 0.3s all;
+    cursor: pointer;
+    background: rgb(253, 82, 123);
+    background: -moz-linear-gradient(81deg, rgba(253, 82, 123, 1) 0%, rgba(255, 99, 76, 1) 100%);
+    background: -webkit-linear-gradient(81deg, rgba(253, 82, 123, 1) 0%, rgba(255, 99, 76, 1) 100%);
+    background: linear-gradient(81deg, rgba(253, 82, 123, 1) 0%, rgba(255, 99, 76, 1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#fd527b", endColorstr="#ff634c", GradientType=1);
+    box-shadow: 0x 0px 50px linear-gradient(81deg, rgba(253, 82, 123, 1) 0%, rgba(255, 99, 76, 1) 100%);
+}
+
+/* 
+* Prevents issues when the parent creates a 
+* stacking context. (For example, using the transform
+* property )
+*/
+.button:hover:after {
+
+    content: "";
+    display: block;
+    background: linear-gradient(-45deg, #f89b29 0%, #ff0f7b 100%);
+    width: 100%;
+    transform: translate3d(0px, 20px, 0) scale(0.95);
+    height: 13px;
+    filter: blur(8px);
+    z-index: 0;
+    position: absolute;
+    top: 21px;
+    left: 2px;
+}
+
+
+/*model*/
+
+
+.black-out {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    bottom: 0px;
+    background-color: var(--Charcoal-Grey);
+}
+
+.thankyou {
+    padding: 2.5em;
+    max-width: 25em;
+    background-color: var(--White);
+    border-radius: 2em;
+}
+
+.thankyou_heading {
+    color: var(--Charcoal-Grey);
+    font-size: clamp(0.5em, 1vh + 2em, 4em);
+    font-weight: 700;
+    line-height: 1em;
+    margin: 0.8em 0;
+}
+
+.mb-2 {
+    margin-top: 2em;
+}
+
+.val P {
+    display: none;
+}
+
+.text-valid {
+    text-align: right;
+    font-size: 13px;
+    right: 0px;
+    color: #ff0000;
+    position: absolute;
+    top: -10px;
+}
+
+.email-val {
+    position: relative;
+}
+
+.email-val P {
+    display: block;
+}
+
+.email-val input {
+    border-color: #ff0000;
+    color: red;
+    background-color: rgb(255 0 0 / 29%);
+}
+
+.email-val input {
+    outline: none;
+}
+
+.black-out {
+    display: none;
+}
+
+.val {
+    position: relative;
+}
+
+
+@media (width <=768px) {
+    .container {
+        padding: 0px;
+        flex-direction: column-reverse;
+    }
+
+    ul li span {
+
+        font-size: 14px;
+    }
+
+    section {
+        padding: 0px;
+    }
+
+    body {
+        background-color: var(--White);
+        line-height: normal;
+        align-items: flex-start;
+    }
+
+    section:nth-of-type(1) {
+        padding: 2em;
+    }
+
+    .news_box_heading {
+        color: var(--Charcoal-Grey);
+        font-size: clamp(0.5em, 1vh + 2em, 3.2em)
+    }
+
+    .image-div {
+        height: 295px;
+        background-image: url('./assets/images/illustration-sign-up-mobile.svg');
+
+    }
+    .black-out{ background-color: var(--White);}
+    .thankyou{
+        background-color: var(--White);
+    height: 100vh;
+    border-radius: 2em;
+    padding-top: 11em;
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+    }
+}
