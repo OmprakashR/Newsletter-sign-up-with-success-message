@@ -1,6 +1,6 @@
 function ValidateEmail(input) {
   var validRegex =
-    /^[a-zA-Z0-9!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
 
   if (input.value.match(validRegex)) {
     document.form1.text1.focus();
